@@ -46,7 +46,6 @@ Trong trường hợp bạn muốn xử lí các dữ liệu rx ble phục vụ 
 typedef void (*easy_ble_callback_t)(uint8_t *rxValue, uint8_t len,esp_gatt_if_t *gatts_if, uint16_t conn_id, uint16_t attr_handle);
 void easy_ble_set_rx_callback(easy_ble_callback_t c);
 ```
- iot47_ble_ota_task vào trong sự kiện 
 # Không sử dụng lớp bọc easy_ble
 Bằng cách sử dụng trực tiếp các api của espidf_ble_ota, bạn có thể toàn quyền khởi tạo ble và sử dụng ble theo ý muốn bạn, tuy nhiên sẽ cần 1 chút kiến thức về ble. Chỉ cần đặt hàm iot47_ble_ota_task vào trong sự kiện ESP_GATTS_WRITE_EVT
 Ví dụ:
