@@ -37,5 +37,8 @@ int iot47_ble_ota_task(uint8_t *rxValue, uint8_t len,
 );
 void iot47_stop_ota(void);
 void ble_ota_init(void);
-
+void iot47_ble_ota_set_begin_callback(ota_callback_t c);
+void iot47_ble_ota_set_proces_callback(ota_callback_t c);
+void iot47_ble_ota_set_end_callback(ota_callback_t c);
+void iot47_ble_ota_set_error_callback(ota_callback_t c);
 #endif
