@@ -33,7 +33,7 @@ void app_main(void)
 }
 ```
 # Đăng kí các callback
-Dưới dây là các callback trong quá trình ota, bạn có thể sử dụng hoặc bỏ
+Dưới dây là các callback trong quá trình ota, bạn có thể sử dụng để biết qua trình ota đang diễn ra như nào ( Ví dụ in % download ra màn hình LCD hoặc thông báo lỗi ...)
 ```
 typedef void (*ota_callback_t)(uint32_t curen, uint32_t totol);
 void iot47_ble_ota_set_begin_callback(ota_callback_t c);
